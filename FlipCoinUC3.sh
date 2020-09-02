@@ -1,8 +1,8 @@
 #!/bin/bash
 read -p "Enter How many times you want to flip:" n
 flips=1
-Head=0
-Tail=0
+Hh=0
+Tt=0
 Ht=0
 Th=0
 function coin1()
@@ -24,18 +24,18 @@ do
      then
         echo "HH";
 	doublet[$flips]=HH;
-        Head=`expr $Head + 1`;
-     elif [[ $value -eq 0 && $value2 -eq 0 ]]
+        Ht=`expr $Ht + 1`;
+     elif [[ $value1 -eq 0 && $value2 -eq 0 ]]
      then
          echo "TT";
 	 doublet[$flips]=TT;
-         Tail=`expr $Tail + 1`;
-     elif [[ $value -eq 1 && $value2 -eq 0 ]]
+         Tt=`expr $Tt + 1`;
+     elif [[ $value1 -eq 1 && $value2 -eq 0 ]]
      then
          echo "HT";
          doublet[$flips]=HT;
          Ht=`expr $Ht + 1`;
-      elif [[ $value -eq 0 && $value2 -eq 1 ]]
+      elif [[ $value1 -eq 0 && $value2 -eq 1 ]]
      then
          echo "TH";
          doublet[$flips]=TH;
